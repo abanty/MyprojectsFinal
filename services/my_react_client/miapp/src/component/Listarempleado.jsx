@@ -1,6 +1,6 @@
 import React from 'react';
  
-const Listarpersonas = (props) => {
+const Listarempleado = (props) => {
   return (
 	<div>
   	{
@@ -18,4 +18,4 @@ const Listarpersonas = (props) => {
   )
 };
  
-export default Listarpersonas;
+export default Listarempleado;
