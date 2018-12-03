@@ -114,8 +114,8 @@ class TestUserService(BaseTestCase):
             self.assertIn('Jesus', data['data']['username'])
             self.assertIn('jesusabanto@upeu.edu.pe', data['data']['email'])
             self.assertIn('Alameda', data['data']['address'])
-            self.assertIn('dos', data['data']['phone'])
-            self.assertIn('age', data['data']['age'])
+            self.assertIn('987656765', data['data']['phone'])
+            self.assertIn('11', data['data']['age'])
             self.assertIn('satisfactorio', data['estado'])
 
     def test_all_users(self):
@@ -136,15 +136,15 @@ class TestUserService(BaseTestCase):
                 'jesusabanto@upeu.edu.pe',
                 data['data']['users'][0]['email'])
             self.assertIn('Alameda', data['data']['users'][0]['address'])
-            self.assertIn('dos', data['data']['users'][0]['phone'])
-            self.assertIn('age', data['data']['users'][0]['age'])
+            self.assertIn('987656765', data['data']['users'][0]['phone'])
+            self.assertIn('11', data['data']['users'][0]['age'])
             self.assertIn('Marcos', data['data']['users'][1]['username'])
             self.assertIn(
                 'examensoftware@upeu.edu.pe',
                 data['data']['users'][1]['email'])
             self.assertIn('Huachipa', data['data']['users'][1]['address'])
-            self.assertIn('cuatro', data['data']['users'][1]['phone'])
-            self.assertIn('as', data['data']['users'][1]['age'])
+            self.assertIn('991211444', data['data']['users'][1]['phone'])
+            self.assertIn('12', data['data']['users'][1]['age'])
             self.assertIn('satisfactorio', data['estado'])
 
     def test_single_user_no_id(self):
