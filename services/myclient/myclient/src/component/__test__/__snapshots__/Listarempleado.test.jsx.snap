@@ -1,16 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Listarempleado renders properly 1`] = `
-<div>
-  <h4
-    className="box title is-4"
+exports[`Listarempleado snapshot properly 1`] = `
+<div
+  className="well"
+  style={
+    Object {
+      "color": "black",
+      "float": "center",
+      "fontSize": "18px",
+      "marginLeft": "0px",
+      "marginTop": "50px",
+    }
+  }
+>
+  <legend
+    className="text-center header"
   >
-    abelthf
-  </h4>
-  <h4
-    className="box title is-4"
-  >
-    abel
-  </h4>
+    Lista de desaprobados
+  </legend>
+  <div>
+    <table
+      className="table table-striped"
+    >
+      <thead
+        className="thead-dark"
+      >
+        <tr>
+          <th
+            scope="col"
+          >
+            Usuario
+          </th>
+          <th
+            scope="col"
+          >
+            Email
+          </th>
+          <th
+            scope="col"
+          >
+            Direccion
+          </th>
+          <th
+            scope="col"
+          >
+            Telefono
+          </th>
+          <th
+            scope="col"
+          >
+            Nota
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            abanto
+          </td>
+          <td>
+            aprobadocontrece@gmail.com
+          </td>
+          <td>
+            alameda
+          </td>
+          <td>
+            991644787
+          </td>
+          <td>
+            25
+          </td>
+        </tr>
+        <tr>
+          <td>
+            omar
+          </td>
+          <td>
+            aprobadoconquince@upeu.edu.pe
+          </td>
+          <td>
+            inti
+          </td>
+          <td>
+            991111187
+          </td>
+          <td>
+            21
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;

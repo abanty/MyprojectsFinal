@@ -65,7 +65,7 @@ class App extends Component {
           <section className="section">
             <div className="container">
             <div className="column is-full">
-                  <h1 className="title is-1">Ingreso usuario - Arquitectura Software Abanto</h1>
+                  <h1 className="title is-1">Alumnos desprobados - Arquitectura Software</h1>
                   </div>
               <div className="columns">
                   

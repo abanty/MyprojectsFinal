@@ -6,26 +6,32 @@ import renderer from 'react-test-renderer';
 const users = [
   {
 	'active': true,
-	'email': 'abelthf@gmail.com',
+	'email': 'aprobadocontrece@gmail.com',
 	'id': 1,
-	'username': 'abelthf'
+  'username': 'abanto',
+  'address': 'alameda',
+  'phone': '991644787',
+  'age': '25'
   },
   {
 	'active': true,
-	'email': 'abel.huanca@upeu.edu.pe',
+	'email': 'aprobadoconquince@upeu.edu.pe',
 	'id': 2,
-	'username': 'abel'
+  'username': 'omar',
+  'address': 'inti',
+  'phone': '991111187',
+  'age': '21'
   }
 ];
  
 test('Listarempleado renders properly', () => {
   const wrapper = shallow(<Listarempleado users={users}/>);
-  const element = wrapper.find('h4');
-  expect(element.length).toBe(2);
-  expect(element.get(0).props.children).toBe('abelthf');
+  const element = wrapper.find('th');
+  expect(element.length).toBe(5);
+  expect(element.get(0).props.children).toBe('Usuario');
 });
  
-test('Listarempleado renders properly', () => {
+test('Listarempleado snapshot properly', () => {
   const tree = renderer.create(<Listarempleado users={users}/>).toJSON();
   expect(tree).toMatchSnapshot();  
 });

@@ -34,8 +34,8 @@ class TestUserService(BaseTestCase):
                     'username': 'Jesus',
                     'email': 'jesusabanto@upeu.edu.pe',
                     'address': 'Alameda',
-                    'phone': 'dos',
-                    'age': 'veinte'
+                    'phone': '987656765',
+                    'age': '11'
                 }),
                 content_type='application/json',
             )
@@ -78,8 +78,8 @@ class TestUserService(BaseTestCase):
                     'username': 'Jesus',
                     'email': 'jesusabanto@upeu.edu.pe',
                     'address': 'Alameda',
-                    'phone': 'dos',
-                    'age': 'veinte'
+                    'phone': '987656765',
+                    'age': '11'
                 }),
                 content_type='application/json',
             )
@@ -89,8 +89,8 @@ class TestUserService(BaseTestCase):
                     'username': 'Jesus',
                     'email': 'jesusabanto@upeu.edu.pe',
                     'address': 'Alameda',
-                    'phone': 'dos',
-                    'age': 'veinte'
+                    'phone': '987656765',
+                    'age': '11'
                 }),
                 content_type='application/json',
             )
@@ -105,8 +105,8 @@ class TestUserService(BaseTestCase):
             'Jesus',
             'jesusabanto@upeu.edu.pe',
             'Alameda',
-            'dos',
-            'age')
+            '987656765',
+            '11')
         with self.client:
             response = self.client.get(f'/users/{user.id}')
             data = json.loads(response.data.decode())
@@ -119,13 +119,13 @@ class TestUserService(BaseTestCase):
             self.assertIn('satisfactorio', data['estado'])
 
     def test_all_users(self):
-        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', 'dos', 'age')
+        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', '987656765', '11')
         add_user(
             'Marcos',
             'examensoftware@upeu.edu.pe',
             'Huachipa',
-            'cuatro',
-            'as')
+            '991211444',
+            '12')
         with self.client:
             response = self.client.get('/users')
             data = json.loads(response.data.decode())
@@ -172,13 +172,13 @@ class TestUserService(BaseTestCase):
         self.assertIn(b'<td>No users!</td>', response.data)
 
     def test_main_with_users(self):
-        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', 'dos', 'age')
+        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', '987656765', '11')
         add_user(
             'Marcos',
             'examensoftware@upeu.edu.pe0',
             'Huachipa',
-            'cuatro',
-            'as')
+            '991211444',
+            '12')
         with self.client:
             response = self.client.get('/')
             self.assertEqual(response.status_code, 200)
@@ -194,7 +194,7 @@ class TestUserService(BaseTestCase):
             response = self.client.post(
                 '/',
                 data=dict(username='Jesus', email='jesusabanto@upeu.edu.pe',
-                          address='Alameda', phone='dos', age='age'),
+                          address='Alameda', phone='987656765', age='11'),
                 follow_redirects=True
             )
             self.assertEqual(response.status_code, 200)

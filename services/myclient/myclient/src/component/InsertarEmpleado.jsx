@@ -52,7 +52,7 @@ const InsertarEmpleado = (props) => {
         />
       </div>
       <div className="field">
-      <label>Edad: </label>
+      <label>Nota: </label>
         <input
           name="age"
           className="input"
@@ -65,8 +65,8 @@ const InsertarEmpleado = (props) => {
       </div>
       <input
         type="submit"
-        className="button is-primary is-large is-fullwidth"
-        value="Submit"
+        className="button is-warning is-large is-fullwidth"
+        value="Guardar"
       />
     </form>    
   )

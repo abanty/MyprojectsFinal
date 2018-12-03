@@ -10,8 +10,8 @@ const styles = {
 const Listarempleado = (props) => {
   return (
 
-    <div class="well" style={styles}> 
-      <legend className="text-center header" >Lista</legend>
+    <div className="well" style={styles}> 
+      <legend className="text-center header" >Lista de desaprobados</legend>
               <div>
                       <table className="table table-striped"  >
                          <thead className="thead-dark">
@@ -20,7 +20,7 @@ const Listarempleado = (props) => {
                               <th scope="col">Email</th> 
 															<th scope="col">Direccion</th>                           
 															<th scope="col">Telefono</th> 
-															<th scope="col">Edad</th> 
+															<th scope="col">Nota</th> 
                             </tr>
                           </thead>
 													<tbody >
