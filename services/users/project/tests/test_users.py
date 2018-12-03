@@ -119,7 +119,12 @@ class TestUserService(BaseTestCase):
             self.assertIn('satisfactorio', data['estado'])
 
     def test_all_users(self):
-        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', '987656765', '11')
+        add_user(
+            'Jesus',
+            'jesusabanto@upeu.edu.pe',
+            'Alameda',
+            '987656765',
+            '11')
         add_user(
             'Marcos',
             'examensoftware@upeu.edu.pe',
@@ -172,7 +177,12 @@ class TestUserService(BaseTestCase):
         self.assertIn(b'<td>No users!</td>', response.data)
 
     def test_main_with_users(self):
-        add_user('Jesus', 'jesusabanto@upeu.edu.pe', 'Alameda', '987656765', '11')
+        add_user(
+            'Jesus',
+            'jesusabanto@upeu.edu.pe',
+            'Alameda',
+            '987656765',
+            '11')
         add_user(
             'Marcos',
             'examensoftware@upeu.edu.pe0',
